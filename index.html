@@ -167,7 +167,7 @@
          *******************************/
         async function fetchLatestFonts() {
             try {
-                console.log(PROXY_URL);
+                //console.log(PROXY_URL);
                 // Helpful UI if the developer forgot to set PROXY_URL
                 if (!PROXY_URL || PROXY_URL.includes('ttps://eloquent-bubblegum-cbb995.netlify.app/.netlify/functions/gemini')) {
                     document.getElementById('loadingState').innerHTML = `
@@ -219,6 +219,7 @@ Return strictly JSON only.`;
                     },
                     body: JSON.stringify(requestBody)
                 });
+                console.log(requestBody);
 
                 // Attempt to parse Gemini-style response proxied back
                 const text = await response.text();
