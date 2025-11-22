@@ -71,8 +71,6 @@
         /******************************
          * CONFIG — Update PROXY_URL *
          ******************************/
-        // Replace <YOUR_NETLIFY_SITE> with your Netlify site name:
-        // e.g. 'https://my-font-api.netlify.app/.netlify/functions/gemini'
         const PROXY_URL = "https://eloquent-bubblegum-cbb995.netlify.app/.netlify/functions/gemini";
 
         // Your GitHub Pages origin (used by proxy to validate origin)
@@ -169,7 +167,7 @@
         async function fetchLatestFonts() {
             try {
                 // Helpful UI if the developer forgot to set PROXY_URL
-                if (!PROXY_URL || PROXY_URL.includes('<YOUR_NETLIFY_SITE>')) {
+                if (!PROXY_URL || PROXY_URL.includes('https://eloquent-bubblegum-cbb995.netlify.app/')) {
                     document.getElementById('loadingState').innerHTML = `
                         <div class="bg-white rounded-lg shadow-lg p-8 text-center">
                             <div class="text-yellow-500 text-6xl mb-4">⚠️</div>
