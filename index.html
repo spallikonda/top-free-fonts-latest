@@ -167,6 +167,7 @@
          *******************************/
         async function fetchLatestFonts() {
             try {
+                console.log(PROXY_URL);
                 // Helpful UI if the developer forgot to set PROXY_URL
                 if (!PROXY_URL || PROXY_URL.includes('ttps://eloquent-bubblegum-cbb995.netlify.app/.netlify/functions/gemini')) {
                     document.getElementById('loadingState').innerHTML = `
